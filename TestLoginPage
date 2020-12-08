@@ -1,0 +1,20 @@
+*** Settings ***
+Library   seleniumlibrary
+
+*** Variables ***
+
+*** Test Cases ***
+
+Verify Contactus
+
+open browser  https://www.propertycapsule.com/  chrome
+
+click link  xpath:/html/body/footer/ul/li[3]/a
+
+input test   id:FirstName  Swapnil
+input test   id:LastName  Mane
+input test   id:Email  swapnilmane8727@gmail.com
+click link  xpath://*[@id="GDPR_Opt_In__c"]
+click link  xpath://*[@id="mktoForm_2620"]/div[11]/span/button
+
+close browser
